@@ -1,0 +1,157 @@
+body {
+  font-family: "Albert Sans", sans-serif;
+  background-color: #292f3f;
+}
+
+figure {
+  margin: 0;
+  padding: 0 0.5rem 0 0.75rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  padding: 4rem 2rem;
+  min-height: 100vh;
+}
+
+app-title {
+  font-size: 3rem;
+  color: white;
+  display: block;
+  margin: 2rem 0;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #222;
+  line-height: 3.625rem;
+  margin: 0;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #222;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.city-name {
+  margin-right: 0.75rem;
+  line-height: 1.5rem;
+}
+
+form {
+  width: 100%;
+  margin-bottom: 4rem;
+  max-width: 24.5rem;
+}
+
+input {
+  border-radius: 8px;
+  border: 0;
+  height: 3.5rem;
+  background: #1e232e url("img/search-icon.svg") 1rem center no-repeat;
+  padding-left: 3.25rem;
+  outline: none;
+  color: white;
+  flex-grow: 1;
+}
+
+::placeholder {
+  color: #7b8296;
+  opacity: 1;
+}
+
+input:hover,
+input:focus {
+  background-color: #181d27;
+}
+
+.form-row {
+  display: flex;
+}
+
+.form-msg {
+  background-color: #222836;
+  color: #eaeaea;
+  padding: 0.5rem 1rem;
+  margin-top: 0;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  width: 75%;
+  transform: translate3d(0, -100%, 0);
+  opacity: 0;
+  z-index: -1;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+
+.form-msg.visible {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+
+.cities {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 0;
+  gap: 1.5rem;
+  margin: 0 0 2rem;
+}
+
+.cities li {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  background-color: white;
+  align-items: center;
+  padding: 1.25rem;
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px 2px rgba(255, 255, 255, 0.25);
+}
+
+.city-conditions {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.0625rem;
+  color: #454545;
+}
+
+footer {
+  background-color: #292f3f;
+  width: 100%;
+  color: rgb(238, 238, 238);
+  text-align: center;
+  padding: 24px;
+  bottom: 0;
+  left: 0;
+}
+
+/* 560px */
+@media screen and (min-width: 560px) {
+  .cities {
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  }
+
+  .cities li {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+}
+
+/* 768px */
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 4rem 6.75rem;
+  }
+}
